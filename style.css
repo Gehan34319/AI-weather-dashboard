@@ -1,0 +1,40 @@
+let apiKey = "YOUR_API_KEY";
+
+function getWeather() {
+
+    let city = document.getElementById("city").value;
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+
+        let temp = data.main.temp;
+        let desc = data.weather[0].description;
+
+        let aiMessage = generateAI(temp, desc);
+
+        document.getElementById("result").innerHTML =
+            `
+            🌡 Temperature: ${temp}°C <br>
+            🌥 Weather: ${desc} <br><br>
+            🤖 AI Insight: ${aiMessage}
+            `;
+    });
+
+}
+
+// 🧠 AI Logic Layer (simple ML-style rules)
+function generateAI(temp, desc) {
+
+    if(temp > 30) return "Hot weather. Stay hydrated 💧";
+    if(temp < 20) return "Cool weather. Wear warm clothes 🧥";
+    if(desc.includes("rain")) return "Rain expected. Take umbrella ☔";
+    return "Normal weather conditions 👍";
+}
+
+// 🌙 Dark mode toggle
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
