@@ -37,4 +37,41 @@ function generateAI(temp, desc) {
 // 🌙 Dark mode toggle
 function toggleMode() {
     document.body.classList.toggle("dark");
+    
+}
+/* Dynamic Hover & Interaction Effects */
+
+/* Makes the search button glow and lift slightly when hovered */
+#search-btn {
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+#search-btn:active {
+    transform: translateY(0);
+}
+
+/* Adds a subtle entry fade and lift to the weather display card */
+.weather-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.weather-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow effect for the input field when typing */
+#city-input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
 }
