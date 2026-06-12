@@ -6,3 +6,10 @@ An interactive web application that provides real-time weather forecasts enhance
 * **Real-time Data:** Live weather updates based on your location.
 * **AI Insights:** Smart summaries explaining how the weather will impact your day.
 * **Responsive Design:** Works flawlessly on mobile, tablet, and desktop.
+## 🛠️ Installation & Setup
+
+To get this project running locally on your machine, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/Gehan34319/AI-weather-dashboard.git](https://github.com/Gehan34319/AI-weather-dashboard.git)
