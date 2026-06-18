@@ -75,3 +75,37 @@ function toggleMode() {
     border-color: #38bdf8;
     box-shadow: 0 0 8px rgba(56, 189, 248, 0.2);
 }
+.favorites-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.favorites-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+#favorites-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.city-chip {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.city-chip:hover {
+    background: var(--accent-color);
+    color: #0f2027;
+    transform: translateY(-2px);
+}
